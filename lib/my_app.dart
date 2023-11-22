@@ -11,7 +11,15 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Categories> categories = [tabBar, toggleRadio, appBars];
+  List<Categories> categories = [
+    tabBar,
+    toggleRadio,
+    appBars,
+    navigationBars,
+    dropDowns,
+    librariesNameList,
+    appSecurityRelated
+  ];
 
   static final Categories tabBar = Categories(
     route: ScreenRoutes.tabBars,
@@ -24,6 +32,22 @@ class _MyAppState extends State<MyApp> {
   static final Categories appBars = Categories(
     route: ScreenRoutes.appBars,
     categoryName: 'App bars',
+  );
+  static final Categories navigationBars = Categories(
+    route: ScreenRoutes.appBars,
+    categoryName: 'Navigation bars',
+  );
+  static final Categories dropDowns = Categories(
+    route: ScreenRoutes.dropDowns,
+    categoryName: 'Drop Downs',
+  );
+  static final Categories librariesNameList = Categories(
+    route: ScreenRoutes.librariesNameList,
+    categoryName: 'Libraries / features name list',
+  );
+  static final Categories appSecurityRelated = Categories(
+    route: ScreenRoutes.librariesNameList,
+    categoryName: 'Libraries / features name list',
   );
 
   @override
