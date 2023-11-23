@@ -46,8 +46,8 @@ class _MyAppState extends State<MyApp> {
     categoryName: 'Libraries / features name list',
   );
   static final Categories appSecurityRelated = Categories(
-    route: ScreenRoutes.librariesNameList,
-    categoryName: 'Libraries / features name list',
+    route: ScreenRoutes.appSecurityRelated,
+    categoryName: 'App security related',
   );
 
   @override
