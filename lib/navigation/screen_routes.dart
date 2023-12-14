@@ -1,5 +1,6 @@
 class ScreenRoutes {
-  static const String myApp = 'myApp';
+  //main categories
+  static const String myApp = 'myapp';
   static const String tabBars = 'tabbars';
   static const String toggleRadio = 'toggleradio';
   static const String appBars = 'appbars';
@@ -7,4 +8,6 @@ class ScreenRoutes {
   static const String dropDowns = 'dropdowns';
   static const String librariesNameList = 'librariesnamelist';
   static const String appSecurityRelated = 'appsecurityrelated';
+  //radio buttons
+  static const String singleSelectRadio = 'singleselectradio';
 }

@@ -5,7 +5,8 @@ import 'package:components_project/screens/app_security_related_screen.dart';
 import 'package:components_project/screens/drop_downs_screen.dart';
 import 'package:components_project/screens/navigation_bars_screen.dart';
 import 'package:components_project/screens/tab_bars_screen.dart';
-import 'package:components_project/screens/toggle_radio_screen.dart';
+import 'package:components_project/screens/toggle_radio_screen/components/single_select_radio.dart';
+import 'package:components_project/screens/toggle_radio_screen/toggle_radio_screen.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
@@ -20,7 +21,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       });
     case ScreenRoutes.toggleRadio:
       return MaterialPageRoute(builder: (BuildContext context) {
-        return const ToggleRadioScreen();
+        return ToggleRadioScreen();
       });
     case ScreenRoutes.appBars:
       return MaterialPageRoute(builder: (BuildContext context) {
@@ -41,6 +42,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case ScreenRoutes.appSecurityRelated:
       return MaterialPageRoute(builder: (BuildContext context) {
         return const AppSecurityRelated();
+      });
+    case ScreenRoutes.singleSelectRadio:
+      return MaterialPageRoute(builder: (BuildContext context) {
+        return const SingleSelectRadio();
       });
     default:
       return MaterialPageRoute(builder: (BuildContext context) {
