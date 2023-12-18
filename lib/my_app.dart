@@ -18,7 +18,8 @@ class _MyAppState extends State<MyApp> {
     navigationBars,
     dropDowns,
     librariesNameList,
-    appSecurityRelated
+    appSecurityRelated,
+    stateMangementTechniques
   ];
 
   static final Categories tabBar = Categories(
@@ -49,6 +50,10 @@ class _MyAppState extends State<MyApp> {
     route: ScreenRoutes.appSecurityRelated,
     categoryName: 'App security related',
   );
+  static final Categories stateMangementTechniques = Categories(
+    route: ScreenRoutes.stateMangementTechniques,
+    categoryName: 'State management techniques',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -56,31 +61,34 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(
         title: const Text('Components library'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Wrap(
-            children: List.generate(
-          categories.length,
-          (index) => InkWell(
-            onTap: () {
-              Navigator.pushNamed(
-                  context, categories[index].route ?? ScreenRoutes.myApp);
-            },
-            child: Container(
-              margin: const EdgeInsets.only(right: 20, bottom: 20),
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 223, 222, 222),
-                  borderRadius: BorderRadius.circular(5)),
-              child: Text(
-                categories[index].categoryName.toString(),
-                style: const TextStyle(
-                  fontSize: 20,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          child: Wrap(
+              children: List.generate(
+            categories.length,
+            (index) => InkWell(
+              onTap: () {
+                Navigator.pushNamed(
+                    context, categories[index].route ?? ScreenRoutes.myApp);
+              },
+              child: Container(
+                margin: const EdgeInsets.only(right: 20, bottom: 20),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 223, 222, 222),
+                    borderRadius: BorderRadius.circular(5)),
+                child: Text(
+                  categories[index].categoryName.toString(),
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ),
-          ),
-        )),
+          )),
+        ),
       ),
     );
   }

@@ -8,6 +8,10 @@ class ScreenRoutes {
   static const String dropDowns = 'dropdowns';
   static const String librariesNameList = 'librariesnamelist';
   static const String appSecurityRelated = 'appsecurityrelated';
+  static const String stateMangementTechniques = 'statemanagementtechniques';
   //radio buttons
   static const String singleSelectRadio = 'singleselectradio';
+  //state management
+  static const String setState = 'setstate';
+  static const String blocStateManagement = 'blocstatemanagement';
 }
