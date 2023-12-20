@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     categoryName: 'App bars',
   );
   static final Categories navigationBars = Categories(
-    route: ScreenRoutes.appBars,
+    route: ScreenRoutes.navigationBars,
     categoryName: 'Navigation bars',
   );
   static final Categories dropDowns = Categories(
