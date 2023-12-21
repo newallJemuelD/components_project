@@ -14,6 +14,7 @@ class ScreenRoutes {
   //state management
   static const String setState = 'setstate';
   static const String blocStateManagement = 'blocstatemanagement';
+  static const String provider = 'provider';
   //app bars
   static const String sliverAppbar = 'sliverappbar';
 }

@@ -33,6 +33,7 @@ class StateManagementScreen extends StatelessWidget {
   final List<Categories> categories = [
     setState,
     blocStateManagement,
+    provider,
   ];
 
   static final Categories setState = Categories(
@@ -43,6 +44,11 @@ class StateManagementScreen extends StatelessWidget {
   static final Categories blocStateManagement = Categories(
     route: ScreenRoutes.blocStateManagement,
     categoryName: 'bloc',
+  );
+
+  static final Categories provider = Categories(
+    route: ScreenRoutes.provider,
+    categoryName: 'provider',
   );
 
   @override

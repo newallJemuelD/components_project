@@ -8,6 +8,8 @@ import 'package:components_project/screens/app_security_related_screen.dart';
 import 'package:components_project/screens/drop_downs_screen.dart';
 import 'package:components_project/screens/libraries_name_list_screen.dart';
 import 'package:components_project/screens/navigation_bars_screen.dart';
+import 'package:components_project/screens/state_management/components/provider/counter_view_model.dart';
+import 'package:components_project/screens/state_management/components/provider/provider_screen.dart';
 import 'package:components_project/screens/state_management/components/set_state_counter_app.dart';
 import 'package:components_project/screens/state_management/state_management_screen.dart';
 import 'package:components_project/screens/tab_bars_screen.dart';
@@ -15,9 +17,11 @@ import 'package:components_project/screens/toggle_radio_screen/components/single
 import 'package:components_project/screens/toggle_radio_screen/toggle_radio_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 import 'screens/state_management/components/bloc/bloc_state_management.dart';
 import 'screens/state_management/components/bloc/counter_bloc.dart';
+import 'screens/state_management/components/provider/counter_model.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -82,6 +86,17 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         return BlocProvider(
           create: (context) => CounterBloc(),
           child: const BlocStateManagement(),
+        );
+      });
+    case ScreenRoutes.provider:
+      return MaterialPageRoute(builder: (BuildContext context) {
+        int count = 0;
+        final counterModel = CounterModel(count);
+        final counterViewModel = CounterViewModel(counterModel);
+
+        return ChangeNotifierProvider.value(
+          value: counterViewModel,
+          child: const ProviderScreen(),
         );
       });
     //add next here
