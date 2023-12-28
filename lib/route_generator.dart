@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:components_project/my_app.dart';
 import 'package:components_project/navigation/screen_routes.dart';
 import 'package:components_project/screens/app_bars/app_bars_screen.dart';
